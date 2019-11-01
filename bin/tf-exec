@@ -1,0 +1,22 @@
+#!/bin/bash
+if [[ $2 != -target* ]]
+  then
+    echo "one or more -target arguments must be supplied"
+    exit 1  
+fi
+
+if [[ $2 == "-target=all" ]]
+  then
+    while true; do
+        read -p "Do you wish to target ALL resources? " yn
+        case $yn in
+            [Yy]es ) first_arg=$1; set --; set -- $first_arg; break;;
+            [Nn]* ) exit;;
+            * ) echo "Please answer yes or no.";;
+        esac
+    done
+fi
+
+tf-init
+cd tmp
+terraform $@

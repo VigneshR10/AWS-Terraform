@@ -1,0 +1,21 @@
+module "rds" {
+  source = "./rds"
+  projectName = "${var.projectName}"
+  environment = "${var.environment}"
+  dbSubnetGroup = "${module.vpc.dbSubnetGroup}"
+  engine = "${var.engine}"
+  engineMode = "${var.engineMode}"
+  databaseName = "${var.databaseName}"
+  port         = "${var.port}"
+  masterUsername = "${var.masterUsername}"
+  masterPassword = "${var.masterPassword}"
+  backupRetentionPeriod = "${var.backupRetentionPeriod}"
+  applyImmediately = "${var.applyImmediately}"
+  isStorageEncrypted = "${var.isStorageEncrypted}"
+  skipFinalSnapshot = "${var.skipFinalSnapshot}"
+  rdsDeletionProtection = "${var.rdsDeletionProtection}"
+  backtrackWindow = "${var.backtrackWindow}"
+  backupWindow = "${var.backupWindow}"
+  rdsScalingTarget = "${var.rdsScalingTarget}"
+  securityGroupIds = ["${aws_security_group.securityGroupAurora.id}"]
+}

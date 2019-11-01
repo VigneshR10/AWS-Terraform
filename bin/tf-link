@@ -1,0 +1,10 @@
+#!/bin/bash
+mkdir -p tmp
+cd tmp
+find . -type l -exec unlink {} \;
+# Link files
+find ../overrides -type f -maxdepth 1 -exec ln -s {} . \;
+find ../../../src -type f -maxdepth 1 -exec ln -s {} . \;
+# Link modules
+find ../overrides -mindepth 1 -type d -exec ln -s {} . \;
+find ../../../src -mindepth 1 -type d -exec ln -s {} . \;

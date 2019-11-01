@@ -1,0 +1,8 @@
+#!/bin/bash
+tf-link
+cd tmp
+if [[ "$OSTYPE" == "darwin"* ]]; then
+    terraform init -upgrade -plugin-dir=../../../lib/plugins/darwin_amd64
+elif [[ "$OSTYPE" == "linux-gnu" ]]; then
+    terraform init -upgrade -plugin-dir=~/teezle/Tools/teezle/lib/plugins/linux_amd64
+fi

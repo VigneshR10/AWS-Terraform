@@ -1,0 +1,3 @@
+#!/bin/bash
+tf-link
+tf-exec destroy $@
