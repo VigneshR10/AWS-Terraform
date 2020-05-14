@@ -1,3 +1,14 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:d1e63e14947d2730df83b956bafff6e0a33acd09ffa3b523c6d286f0b8641c58
-size 593
+The AWS resources created by this code are mentioned here
+
+It is especially designed for mission critical application where it can assure high available and scalable system. The system has Webservers, Applications (microservices in Kubernetes Amazon Elastic Kubernete Services), and highly scalable and available database (Amazon RDS Aurora MySQL cloud managed database with multi-az deployment).
+
+Amazon Services used 
+VPC
+EC2
+Amazon RDS (Aurora-MySQL)
+ACM
+Route53
+Auto Scaling Group
+Elastic Load Balancer
+IAM
+Simple Notification Service
