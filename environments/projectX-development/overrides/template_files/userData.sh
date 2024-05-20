@@ -5,9 +5,9 @@ mkdir Deployments
 chown -R ubuntu:ubuntu Deployments
 cd Deployments
 ssh-add /home/ubuntu/.ssh/rt-messages-web
-git clone git@bitbucket.org:dev_teezle/dataviewer-webserver.git && chown -R ubuntu:ubuntu dataviewer-webserver 
-cd dataviewer-webserver
+git clone git@bitbucket.org:dev_xyz/sample_repo.git && chown -R ubuntu:ubuntu sample-repo 
+cd sample-repo 
 npm install && cd bin
-forever start web-ui-server.js
+forever start server.js
 echo "Deployment Process Done"
 
