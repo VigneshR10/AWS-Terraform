@@ -1,3 +1,4 @@
+# Sample Script for deployment
 #!/bin/bash
 cd /home/ubuntu
 eval "$(ssh-agent)"
@@ -10,4 +11,3 @@ cd sample-repo
 npm install && cd bin
 forever start server.js
 echo "Deployment Process Done"
-
