@@ -1,3 +1,4 @@
+# Sample script for Deployment
 #!/bin/bash
 cd /home/ubuntu
 eval "$(ssh-agent)"
